@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    /* background: url(./12.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%; */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.popup-inner {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 450px;
+    background-color: #fff;
+}
+
+.popup__photo {
+
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 72%;
+    height: 100%;
+    overflow: hidden !important;
+}
+
+.popup__photo img {
+    width: auto;
+    height: 100%;
+}
+
+.popup__text {
+    max-width: 500px;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: -220px;
+    overflow: auto;
+}
+
+.popup__text h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #0A0A0A;
+}
+
+.popup__text p {
+    font-size: 0.875rem;
+    color: #686868;
+    line-height: 1.5;
+}
+
+.popup-inner a {
+    position: relative;
+    display: block;
+    top: 35%;
+    left: -10%;
+    width: 200px;
+    height: 50px;
+    background-color: #0A0A0A30;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.popup-inner a::after {
+    content: "Close";
+    transition: all 0.3s;
+}
+
+.popup-inner a:hover {
+    background-color: #0A0A0A50;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.container #text {
+    position: fixed;
+    top: 71.5%;
+    left: 37.5%;
+    width: 200px;
+    cursor: pointer;
+    color: #686868;
+    text-decoration: none;
+}
