@@ -27,17 +27,6 @@ var iUp = (function () {
 	}
 })();
 
-function getBingImages(imgUrls) {
-	/**
-	 * 获取Bing壁纸
-	 * 先使用 GitHub Action 每天获取 Bing 壁纸 URL 并更新 images.json 文件
-	 * 然后读取 images.json 文件中的数据
-	 */
-	$panel.css("background", "url(https://iw233.cn/api.php?sort=pc) center center no-repeat #666");
-	$panel.css("background-size", "cover");
-	sessionStorage.setItem(indexName, index);
-}
-
 $(document).ready(function () {
 	// 获取一言数据
 	$.get('https://v1.hitokoto.cn', function (res) {
